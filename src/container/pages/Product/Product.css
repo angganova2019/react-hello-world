@@ -64,7 +64,7 @@
     margin-right: 10px;
 }
 
-input {
+.counter input {
     border: 1px solid grey;
     height: 48px;
     border-radius: 4px;

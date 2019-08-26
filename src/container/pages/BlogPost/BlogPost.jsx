@@ -93,7 +93,7 @@ class BlogPost extends Component {
     }
 
     handleDetail = (id) => {
-        // this.props.history.push(`/detail-post/$(id)`);
+        this.props.history.push(`/detail-post/${id}`);
     }
 
     componentDidMount() {
@@ -114,10 +114,9 @@ class BlogPost extends Component {
                     <textarea name="body" id="body" cols="30" rows="10" value={this.state.formBlogPost.body} placeholder="add blog content" onChange={this.handleFormChange}></textarea>
                     <button className="btn-submit" onClick={this.handleSubmit}>Simpan</button>
                 </div>
-                <p className="section-title">Blog Post</p>
                 {
                     this.state.post.map(post => {
-                        return <Post key={post.id} data={post} remove={this.handleRemove} update={this.handleUpdate} />
+                        return <Post key={post.id} data={post} remove={this.handleRemove} update={this.handleUpdate} goDetail={this.handleDetail} />
                     })
                 }
             </Fragment>

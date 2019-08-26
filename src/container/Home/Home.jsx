@@ -28,7 +28,7 @@ class Home extends Component {
                         <Link to="/youtube-component">Youtube</Link>
                     </div>
                     <Route path="/" exact component={BlogPost} />
-                    <Route path="/detail-post/:id" component={DetailPost} />
+                    <Route path="/detail-post/:postID" component={DetailPost} />
                     <Route path="/product" component={Product} />
                     <Route path="/lifecycle" component={LifeCycleComp} />
                     <Route path="/youtube-component" component={YoutubeCompPage} />

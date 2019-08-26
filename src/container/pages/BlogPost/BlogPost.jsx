@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './BlogPost.css';
-import Post from '../../component/Post/Post';
+import Post from '../../../component/Post/Post';
 import Axios from 'axios';
 
 class BlogPost extends Component {
@@ -92,6 +92,10 @@ class BlogPost extends Component {
         }
     }
 
+    handleDetail = (id) => {
+        // this.props.history.push(`/detail-post/$(id)`);
+    }
+
     componentDidMount() {
         this.getPostAPI();
     }
@@ -100,6 +104,8 @@ class BlogPost extends Component {
     render() {
         return (
             <Fragment>
+                <p>Halaman Blog Post</p>
+                <hr />
                 <p className="section-title">Blog Post</p>
                 <div className="form-add-post">
                     <label htmlFor="title">Title</label>

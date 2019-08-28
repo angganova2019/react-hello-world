@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import "./Product.css";
 import CardProduct from './CardProduct/CardProduct';
-import { connect } from 'react-redux';
+import { RootContext, GlobalConsumer } from '../../../context/context';
+// import { connect } from 'react-redux';
 
 class Product extends Component {
     // state = {
@@ -25,7 +26,7 @@ class Product extends Component {
                     </div>
                     <div className="troley">
                         <img src="./ic_cart_white.svg" alt="" />
-                        <div className="count">{this.props.order}</div>
+                        <div className="count">{this.props.state.totalOrder}</div>
                     </div>
                 </div>
                 {/* <CardProduct onCounterChange={(value) => this.handleCounterChange(value)} /> */}
@@ -35,10 +36,11 @@ class Product extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        order: state.totalOrder
-    }
-}
+// const mapStateToProps = (state) => {
+//     return {
+//         order: state.totalOrder
+//     }
+// }
 
-export default connect(mapStateToProps)(Product);
+// export default connect(mapStateToProps)(Product);
+export default GlobalConsumer(Product);

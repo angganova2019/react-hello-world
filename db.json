@@ -590,20 +590,8 @@
     },
     {
       "id": 1566742201040,
-      "title": "Title Post 2",
-      "body": "Content Post 2",
-      "userId": 1
-    },
-    {
-      "id": 1566745341764,
-      "title": "Title num 3",
-      "body": "Konten num 3",
-      "userId": 1
-    },
-    {
-      "id": 1566745574980,
-      "title": "TItle number 4",
-      "body": "Konten number 4",
+      "title": "Title Post 3",
+      "body": "Content Post 3",
       "userId": 1
     }
   ],

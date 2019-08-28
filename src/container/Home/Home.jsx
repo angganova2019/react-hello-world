@@ -8,14 +8,16 @@ import LifeCycleComp from '../pages/LifeCycleComp/LifeCycleComp';
 import BlogPost from '../pages/BlogPost/BlogPost';
 import YoutubeCompPage from '../pages/YoutubeCompPage/YoutubeCompPage';
 import DetailPost from '../pages/BlogPost/DetailPost/DetailPost';
+import GlobalProvider from '../../context/context';
 
 //style
 import './Home.css';
 
+// export const RootContext = createContext();
+// const Provider = RootContext.Provider;
+
 class Home extends Component {
-    state = {
-        showComponent: true
-    }
+
 
     render() {
         return (
@@ -33,9 +35,9 @@ class Home extends Component {
                     <Route path="/lifecycle" component={LifeCycleComp} />
                     <Route path="/youtube-component" component={YoutubeCompPage} />
                 </Fragment>
-            </Router>
+            </Router >
         )
     }
 }
 
-export default Home;
+export default GlobalProvider(Home);
